@@ -4,7 +4,7 @@ extends Node
 var score
 
 func _ready():
-	new_game()
+	pass
 
 func game_over():
 	$ScoreTimer.stop()
@@ -29,7 +29,7 @@ func _on_mob_timer_timeout():
 	mob_direction += randf_range(-PI/4, PI/4)
 	mob.rotation = mob_direction
 	
-	var mob_velocity = Vector2(randf_range(100, 400), 0)
+	var mob_velocity = Vector2(randf_range(250, 600), 0)
 	mob.linear_velocity = mob_velocity.rotated(mob_direction)
 	
 	add_child(mob)

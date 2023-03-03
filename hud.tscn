@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cob5wbqvd5xun"]
+[gd_scene load_steps=5 format=3 uid="uid://cob5wbqvd5xun"]
 
 [ext_resource type="Script" path="res://HUD.gd" id="1_dxxsj"]
 [ext_resource type="FontFile" uid="uid://csptxoirn5t3s" path="res://dodge_assets/fonts/Xolonium-Regular.ttf" id="2_admvc"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_a2j5y"]
+action = &"start_game"
+
+[sub_resource type="Shortcut" id="Shortcut_gwb26"]
+events = [SubResource("InputEventAction_a2j5y")]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_dxxsj")
@@ -52,6 +58,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_admvc")
 theme_override_font_sizes/font_size = 64
+shortcut = SubResource("Shortcut_gwb26")
 text = "Start"
 metadata/_edit_use_anchors_ = true
 
